@@ -1,4 +1,4 @@
-# circle_equ.py
+## circle_equ.py
 
 Circle equation with 3 points known:
 (x-x1)^2 + (y-y1)'2 = (x-x2)^2 + (y-y2)'2 = (x-x3)^2 + (y-y3)'2  = r^2 
@@ -12,7 +12,7 @@ So we can extract this equations:
 With this equations, we are going to find center(x,y) and radius
 
 ---------------------------------------------------------------------
-
+## point_position.py
 ![](images/degree.jpg)
 
 x' = tx
