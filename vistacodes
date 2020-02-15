@@ -1,0 +1,19 @@
+points =np.array([[0.14414765,0.97016356,0.62595586],[0.14414765,0.97016356,0.62595586],[0.60648931,0.92237583,0.29688591],[0.60648931,0.92237583,0.33388591]],np.float64)
+
+cld= pv.PolyData(points)
+
+cld.plot()
+
+plotter = pv.Plotter()
+plotter.add_mesh(cld,color='tan')#create plotter
+
+surf= cld.delaunay_2d()#Surface
+surf.plot() #Create Triangulated Surface
+
+-----------serial port
+
+port = serial.Serial("/dev/ttyACM0",9600,timeout=1,stopbits=1.5)
+
+port.write(b"deneme")
+port.read() # bytes format
+port.read().decode('utf-8') # string format
