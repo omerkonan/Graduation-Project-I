@@ -31,16 +31,19 @@
 
 import math
 
-def point_position(turned_p1, center, r, angle=30):
+def point_position(turned_p1, center, angle=30):
 
 	cx, cy = center
 	tx, ty = turned_p1
 
+
+	r = ( ((cx-tx)**2) + ((cy-ty)**2)) ** 0.5
+
+	print("r:", r)
+	
 	cosa = float(cos(angle))
 	sina = float(sin(angle))
 
-	print(cosa)
-	print(sina)
 
 	x = ((tx-cx)/r)*cosa - ((ty-cy)/r)*sina + cx
 	y = ((ty-cy)/r)*cosa + ((tx-cx)/r)*sina + cy
@@ -64,17 +67,17 @@ def sin(angle):
 	return sina
 
 
-"""
+
 #######TEST_CODE#######
 #---------------------#
 
 def main():
 
-	pt = (5,1)
+	pt = (3,4)
 	center = (0,0)
-	r = 5
+	
 
-	point = point_position(pt, center, r)
+	point = point_position(pt, center)
 
 	print(point)
 
@@ -83,4 +86,3 @@ if __name__ == "__main__":
 
 #---------------------#
 #######################
-"""
